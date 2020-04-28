@@ -18,4 +18,5 @@ class ImagesToScrapSpider(scrapy.Spider):
             loader.add_value('image_urls', absoulte_url)
             loader.add_xpath('book_name', './/h3/a/@title')
             yield loader.load_item()
+            
 

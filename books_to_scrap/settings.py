@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'scrapy.pipelines.images.ImagesPipeline':1,
+   'books_to_scrap.pipelines.BooksToScrapePipeline':1,
 }
 
 IMAGES_STORE = '/media/root/Study/Study/Django_Projects/new/scrapy_projects/books_to_scrap/books_to_scrap'
