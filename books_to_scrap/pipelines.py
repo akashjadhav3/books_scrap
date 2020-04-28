@@ -13,5 +13,6 @@ class BooksToScrapePipeline(ImagesPipeline):
         return [Request(x,meta={'bookname': item.get('book_name')}) for x in item.get(self.images_urls_field, [])]
 
     def file_path(self, request, response=None, info=None):
-        return 'full/%s.jpg' % (request.meta['bookname'])
+        filename = request.meta['bookname'].replace(':', '')
+        return 'full/%s.jpg' % (filename)
 
